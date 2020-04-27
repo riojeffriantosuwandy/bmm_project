@@ -3,7 +3,8 @@ import psycopg2
 
 class Spareparts(Resource):
     def get(self):
-        connection = psycopg2.connect(database="bmm", host="bmm-real.cqk0ag5bavpf.ap-southeast-1.rds.amazonaws.com", user="RexWar", password="Cibreonline70")
+        connection = psycopg2.connect(database="bmm", host="bmm-real.cqk0ag5bavpf.ap-southeast-1.rds.amazonaws.com",
+                                      user="RexWar", password="Cibreonline70")
         cursor = connection.cursor()
         cursor.execute("SELECT * FROM spareparts ORDER BY id")
         results = cursor.fetchall()
