@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.secret_key = 'rexwar'
 api = Api(app)
 
-api.add_resource(Spareparts, '/')
+api.add_resource(Spareparts, '/spareparts')
 
 if __name__ == '__main__':
     app.run(port=8081)
